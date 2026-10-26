@@ -6,6 +6,10 @@
 
   <br />
 
+  [![Live Demo](https://img.shields.io/badge/Live_Portfolio-uatrisk.github.io%2FMacfolio-2ea44f.svg?style=for-the-badge&logo=safari&logoColor=white)](https://uatrisk.github.io/Macfolio/)
+
+  <br /><br />
+
   [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
   [![React](https://img.shields.io/badge/React-19.2-61dafb.svg?logo=react&logoColor=black)](https://react.dev/)
   [![TypeScript](https://img.shields.io/badge/TypeScript-5.6-3178c6.svg?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
