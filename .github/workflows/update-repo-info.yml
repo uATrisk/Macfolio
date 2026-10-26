@@ -1,0 +1,21 @@
+name: Update Repo Metadata
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update repo homepage and description
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api -X PATCH /repos/${{ github.repository }} \
+            -f homepage="https://uatrisk.github.io/Macfolio/" \
+            -f description="Interactive macOS-style personal developer portfolio built with React, TypeScript, Tailwind CSS, GSAP, and Vite." || true
