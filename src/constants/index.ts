@@ -211,7 +211,14 @@ export {
   gallery,
 };
 
-const WORK_LOCATION = {
+const WORK_LOCATION: {
+  id: number;
+  type: string;
+  name: string;
+  icon: string;
+  kind: string;
+  children: any[];
+} = {
   id: 1,
   type: "work",
   name: "Work",

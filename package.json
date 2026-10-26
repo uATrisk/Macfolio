@@ -1,7 +1,31 @@
 {
-  "name": "mac",
-  "private": true,
-  "version": "0.0.0",
+  "name": "macfolio",
+  "version": "1.0.0",
+  "description": "Interactive macOS-style personal developer portfolio built with React, TypeScript, Tailwind CSS, GSAP, and Vite.",
+  "author": {
+    "name": "Ansh Tomar",
+    "email": "anshtomarrr@gmail.com",
+    "url": "https://github.com/uATrisk"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uATrisk/Macfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/uATrisk/Macfolio/issues"
+  },
+  "homepage": "https://github.com/uATrisk/Macfolio#readme",
+  "license": "MIT",
+  "keywords": [
+    "portfolio",
+    "macos",
+    "react",
+    "typescript",
+    "tailwind",
+    "gsap",
+    "developer-portfolio",
+    "vite"
+  ],
   "type": "module",
   "scripts": {
     "dev": "vite",
