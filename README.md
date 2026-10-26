@@ -62,6 +62,20 @@
 
 ---
 
+## 💼 Featured Projects Showcase
+
+The portfolio showcases several of Ansh's key full-stack and systems engineering projects:
+
+| Project | Description | Tech Stack | Links |
+| :--- | :--- | :--- | :--- |
+| **CLMS** | Full-stack university laundry platform with real-time status and OTP pickup verification. | React, TypeScript, Node.js, Express, Prisma, PostgreSQL, Google OAuth | [Live Demo](https://clms-murex.vercel.app/) • [GitHub](https://github.com/uATrisk/clms) |
+| **TeleVault** | Zero-knowledge, client-side AES-256-GCM encrypted media vault backed by Telegram & Cloudflare. | React, WebCrypto API, Cloudflare Workers & D1, Telegram Bot API | [GitHub](https://github.com/uATrisk/tele-vault) |
+| **Chai Adda** | College canteen management system with real-time tracking, student reviews, and vendor analytics. | Next.js, Node.js, Express, PostgreSQL, Prisma ORM | [Live Demo](https://chai-adda-system.vercel.app/) • [GitHub](https://github.com/uATrisk/ChaiAdda-System) |
+| **PSYS** | Multi-tenant face-recognition classroom attendance system matching camera captures with pgvector. | Next.js, Python, OpenCV, Supabase, pgvector | [GitHub](https://github.com/ps-ys/PSYS) |
+| **AI Resume Ranker** | Intelligent CV screening tool utilizing TF-IDF similarity scoring and automated candidate tiering. | Python, Streamlit, Scikit-learn, NLTK | [GitHub](https://github.com/uATrisk/ai_candidate_evaluation) |
+
+---
+
 ## 🛠️ Tech Stack
 
 | Technology | Purpose |

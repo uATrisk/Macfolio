@@ -16,7 +16,7 @@ const Desktop = () => {
             openWindow("resume", item);
         } else {
             // Set the location in Finder
-            setActiveLocation(item);
+            setActiveLocation(item.type === "work" ? locations.work : item);
 
             // Open or focus Finder window
             if (windows.finder?.isOpen) {
@@ -29,7 +29,16 @@ const Desktop = () => {
 
     const desktopItems = [
         ...locations.about.children,
-        ...locations.resume.children
+        ...locations.resume.children,
+        {
+            id: 99,
+            name: "Projects",
+            icon: "/images/folder.png",
+            kind: "folder",
+            type: "work",
+            position: "top-76 left-10",
+            children: locations.work.children,
+        }
     ];
 
     return (

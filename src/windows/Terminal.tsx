@@ -47,16 +47,13 @@ const Terminal = ({ windowKey }: any) => {
 
         <div className="footnote">
           <p><Check size={20} />
-            5 of 5 Tech Stack loaded successfully(100%)
+            {techStack.length} of {techStack.length} Tech Stack loaded successfully(100%)
           </p>
 
           <p className="text-black">
             <Flag size={15} fill="black" />
             Render time : 6ms
-
-
           </p>
-
         </div>
 
 
