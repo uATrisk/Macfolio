@@ -5,6 +5,7 @@ import clsx from "clsx";
 import { useState } from "react";
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
+import { withBase } from "#utils/path";
 
 const Photos = () => {
     const [activeTab, setActiveTab] = useState("Library");
@@ -31,7 +32,7 @@ const Photos = () => {
                                 )}
                             >
                                 <img
-                                    src={link.icon}
+                                    src={withBase(link.icon)}
                                     className={clsx("w-4 h-4", activeTab === link.title ? "brightness-200 invert" : "")}
                                     alt={link.title}
                                 />

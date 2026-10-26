@@ -3,6 +3,7 @@ import WindowWrapper from "#hoc/WindowWrapper";
 import useWindowStore from "#store/window";
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
+import { withBase } from '#utils/path';
 
 const ImgFile = () => {
     const { windows } = useWindowStore();
@@ -19,7 +20,7 @@ const ImgFile = () => {
             <div className="flex-1 flex items-center justify-center bg-black/90 p-4">
                 <Zoom>
                     <img
-                        src={data.imageUrl || data.icon} // Fallback to icon if imageUrl missing
+                        src={withBase(data.imageUrl || data.icon)} // Fallback to icon if imageUrl missing
                         alt={data.name}
                         className="max-h-[80vh] max-w-full object-contain shadow-2xl"
                         style={{ width: 'auto', height: 'auto' }}

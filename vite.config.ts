@@ -6,6 +6,7 @@ import { fileURLToPath } from 'url'
 
 
 export default defineConfig({
+  base: process.env.VITE_BASE_PATH || (process.env.GITHUB_ACTIONS ? '/Macfolio/' : '/'),
   plugins: [react(), tailwindcss(),],
   resolve: {
     alias: {
@@ -14,6 +15,7 @@ export default defineConfig({
       '#store': resolve(dirname(fileURLToPath(import.meta.url)), 'src/store'),
       '#hoc': resolve(dirname(fileURLToPath(import.meta.url)), 'src/hoc'),
       '#windows': resolve(dirname(fileURLToPath(import.meta.url)), 'src/windows'),
+      '#utils': resolve(dirname(fileURLToPath(import.meta.url)), 'src/utils'),
     },
   },
 })

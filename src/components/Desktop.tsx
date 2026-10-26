@@ -3,6 +3,7 @@ import useLocationStore from "#store/location";
 import useWindowStore from "#store/window";
 import { motion } from "framer-motion";
 import { useRef } from "react";
+import { withBase } from "#utils/path";
 
 const Desktop = () => {
     const constraintsRef = useRef(null);
@@ -57,7 +58,7 @@ const Desktop = () => {
                     transition={{ duration: 0.5, delay: 1 }}
                 >
                     <img
-                        src={project.icon}
+                        src={withBase(project.icon)}
                         alt={project.name}
                         className="w-16 h-16 object-contain drop-shadow-lg select-none pointer-events-none"
                     />

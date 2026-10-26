@@ -42,6 +42,9 @@
       ],
       "#windows/*": [
         "src/windows/*"
+      ],
+      "#utils/*": [
+        "src/utils/*"
       ]
     }
   },

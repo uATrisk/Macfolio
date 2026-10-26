@@ -7,6 +7,7 @@ import useWindowStore from "#store/window"
 import clsx from "clsx"
 import { AnimatePresence, motion } from "framer-motion"
 import { useRef } from "react"
+import { withBase } from "#utils/path"
 
 const Finder = () => {
     const { activeLocation, setActiveLocation } = useLocationStore()
@@ -49,7 +50,7 @@ const Finder = () => {
                         <ul>
                             {Object.values(locations).map((item) => (
                                 <li key={item.id} onClick={() => setActiveLocation(item)} className={clsx(item.id === activeLocation.id ? "active" : "non-active")}>
-                                    <img src={item.icon} className="w-4" alt={item.name} />
+                                    <img src={withBase(item.icon)} className="w-4" alt={item.name} />
                                     <p className="text-sm font-medium truncate">{item.name}</p>
                                 </li>
                             ))}
@@ -60,7 +61,7 @@ const Finder = () => {
                         <ul>
                             {locations.work.children.map((item) => (
                                 <li key={item.id} onClick={() => setActiveLocation(item)} className={clsx(item.id === activeLocation.id ? "active" : "non-active")}>
-                                    <img src={item.icon} className="w-4" alt={item.name} />
+                                    <img src={withBase(item.icon)} className="w-4" alt={item.name} />
                                     <p className="text-sm font-medium truncate">{item.name}</p>
                                 </li>
                             ))}
@@ -90,7 +91,7 @@ const Finder = () => {
                                     onClick={() => handleItemClick(child)}
                                     className={`absolute flex flex-col items-center gap-2 p-2 hover:bg-gray-100 rounded-lg cursor-pointer transition-colors group w-24 ${child.position}`}
                                 >
-                                    <img src={child.icon} className="w-12 h-12 object-contain group-hover:scale-110 transition-transform select-none pointer-events-none" alt={child.name} />
+                                    <img src={withBase(child.icon)} className="w-12 h-12 object-contain group-hover:scale-110 transition-transform select-none pointer-events-none" alt={child.name} />
                                     <span className="text-xs text-center text-gray-600 font-medium break-words w-full select-none">{child.name}</span>
                                 </motion.div>
                             )) || (

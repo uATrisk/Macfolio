@@ -10,6 +10,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/b
 import { useEffect, useRef, useState } from "react";
 
 import useWindowStore from "#store/window";
+import { withBase } from "#utils/path";
 
 const Resume = () => {
     console.log("Resume component rendering");
@@ -39,14 +40,14 @@ const Resume = () => {
                 <WindowControlers windowKey="resume" />
                 <h2>Resume.pdf</h2>
 
-                <a href="/files/resume.pdf" download="Resume.pdf" className="cursor-pointer" title="Download Resume">
+                <a href={withBase("/files/resume.pdf")} download="Resume.pdf" className="cursor-pointer" title="Download Resume">
                     <Download className="icon" />
                 </a>
 
 
             </div>
             <div ref={parentRef} className="flex justify-center overflow-auto h-full w-full">
-                <Document file="/files/resume.pdf">
+                <Document file={withBase("/files/resume.pdf")}>
                     <Page pageNumber={1} width={width ? width * 0.9 : 700} renderTextLayer renderAnnotationLayer />
                 </Document>
             </div>

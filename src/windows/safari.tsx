@@ -1,6 +1,7 @@
 import WindowWrapper from "#hoc/WindowWrapper";
 import WindowControlers from "#components/WindowControlers";
 import { ArrowLeft, ArrowRight, Shield, Share, Plus, Copy, RotateCw, ExternalLink, Github, GraduationCap, Award, Sparkles } from "lucide-react";
+import { withBase } from "#utils/path";
 
 const Safari = ({ windowKey }: { windowKey: any }) => {
     const projects = [
@@ -124,7 +125,7 @@ const Safari = ({ windowKey }: { windowKey: any }) => {
                         <div className="shrink-0 relative">
                             <div className="w-36 h-36 md:w-44 md:h-44 rounded-2xl overflow-hidden shadow-xl border-4 border-white ring-1 ring-gray-200">
                                 <img
-                                    src="/images/ansh.jpg"
+                                    src={withBase("/images/ansh.jpg")}
                                     alt="Ansh Tomar"
                                     className="w-full h-full object-cover"
                                 />

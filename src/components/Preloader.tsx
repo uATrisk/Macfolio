@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { withBase } from "#utils/path";
 
 interface PreloaderProps {
     onFinish: () => void;
@@ -12,7 +13,7 @@ const Preloader = ({ onFinish }: PreloaderProps) => {
         if (hasClicked) return;
 
         setHasClicked(true);
-        const audio = new Audio("/files/sound.mp3");
+        const audio = new Audio(withBase("/files/sound.mp3"));
         audio.volume = 0.5;
         audio.play().catch(e => console.error("Audio play failed", e));
 

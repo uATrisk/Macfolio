@@ -1,6 +1,7 @@
 import WindowControlers from "#components/WindowControlers";
 import WindowWrapper from "#hoc/WindowWrapper";
 import useWindowStore from "#store/window";
+import { withBase } from "#utils/path";
 
 const TxtFile = () => {
     const { windows } = useWindowStore();
@@ -17,6 +18,19 @@ const TxtFile = () => {
             <div className="flex-1 p-10 overflow-auto font-sans text-sm leading-relaxed text-gray-600 bg-white selection:bg-blue-100">
                 {Array.isArray(data.description) ? (
                     <div className="max-w-3xl mx-auto space-y-1">
+                        {data.image && (
+                            <div className="mb-6 flex items-center gap-4 pb-4 border-b border-gray-100">
+                                <img
+                                    src={withBase(data.image)}
+                                    alt={data.name}
+                                    className="w-16 h-16 rounded-full object-cover ring-2 ring-gray-200 shadow-sm"
+                                />
+                                <div>
+                                    <h1 className="text-xl font-bold text-gray-900">{data.name.replace(".txt", "")}</h1>
+                                    <p className="text-xs text-gray-500">{data.subtitle}</p>
+                                </div>
+                            </div>
+                        )}
                         {data.description.map((line: string, i: number) => {
                             // Check if line is a header (all caps or ends with :)
                             const isHeader = line.trim().endsWith(":") || (line.trim().length > 0 && line === line.toUpperCase() && !line.includes("•"));

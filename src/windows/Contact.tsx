@@ -3,6 +3,7 @@ import clsx from "clsx";
 import WindowControlers from "#components/WindowControlers";
 import { socials } from "#constants/index";
 import WindowWrapper from "#hoc/WindowWrapper";
+import { withBase } from "#utils/path";
 
 const Contact = () => {
     return (
@@ -44,7 +45,7 @@ const Contact = () => {
                                 style={{ backgroundColor: item.bg }}
                             >
                                 <img
-                                    src={item.icon}
+                                    src={withBase(item.icon)}
                                     alt={item.text}
                                     className={clsx("w-8 h-8", item.text !== "Telegram" && "invert brightness-0")} // Keep Telegram original color
                                 />

@@ -6,6 +6,7 @@ import gsap from 'gsap'
 import useWindowStore from '#store/window'
 import useLocationStore from '#store/location'
 import { AnimatePresence, motion } from 'framer-motion'
+import { withBase } from '#utils/path'
 
 const Dock = () => {
     const { openWindow, focusWindow, minimizeWindow, closeWindow, windows } = useWindowStore()
@@ -130,7 +131,7 @@ const Dock = () => {
                             onClick={() => toggleApp(app)}
                             onContextMenu={(e) => app.canOpen ? handleContextMenu(e, app.id) : undefined}
                         >
-                            <img src={`/images/${app.icon}`} alt={app.name} loading='lazy'
+                            <img src={withBase(`/images/${app.icon}`)} alt={app.name} loading='lazy'
                                 className={app.canOpen ? "" : "opacity-60"}
                             />
 

@@ -5,6 +5,7 @@ import { useState, useRef, useEffect } from 'react';
 import { Wifi, Bluetooth, Search, User, ChevronRight, Lock, Battery, Headphones, Mouse } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import clsx from 'clsx';
+import { withBase } from '#utils/path';
 
 const Navbar = () => {
   const { openWindow } = useWindowStore()
@@ -31,7 +32,7 @@ const Navbar = () => {
   return (
     <nav ref={navRef}>
       <div>
-        <img src="/images/logo.svg" alt="logo" />
+        <img src={withBase("/images/logo.svg")} alt="logo" />
         <p className='font-bold'>Ansh 's Portfolio</p>
 
         <ul>
